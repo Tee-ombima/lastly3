@@ -1,0 +1,61 @@
+<div class="dashboard-oranges-section">
+    <!-- Tabs navs -->
+<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="oranges-link"
+        data-mdb-toggle="tab"
+        href="#oranges"
+        role="tab"
+        aria-controls="ex1-tabs-1"
+        aria-selected="true"
+        >Oranges</a
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <a
+        class="nav-link"
+        id="add-orange-link"
+        data-mdb-toggle="tab"
+        href="#add-orange"
+        role="tab"
+        aria-controls="ex1-tabs-2"
+        aria-selected="false"
+        >Add an orange</a
+      >
+    </li>
+  </ul>
+  <!-- Tabs navs -->
+
+  <!-- Tabs content -->
+  <div class="tab-content">
+
+    <div
+      class="tab-pane fade show"
+      id="oranges"
+      role="tabpanel"
+      aria-labelledby="ex1-tab-1"
+      style="display: none;"
+    >
+      {% include './dashboard-oranges-section.html' %}
+    </div>
+
+    <div
+      class="tab-pane fade show"
+      id="add-orange"
+      role="tabpanel"
+      aria-labelledby="ex1-tab-1"
+      style="display: none;"
+    >
+      {% include './dashboard-oranges-add-orange.html' %}
+    </div>
+
+  </div>
+  <!-- Tabs content -->
+
+  <!-- External Js-->
+  <script src="/media/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/js/dashboard/oranges.js" type="text/javascript"></script>
+  <!-- End of external Js -->
+</div>

@@ -1,0 +1,51 @@
+{% extends '../../partials/base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="/media/css/auth.css"> 
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+<div class="auth-section">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="section-heading">
+        <h2>Login</h2>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12">
+        <div class="login-form-container">
+        <form id="login-form" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="alert alert-danger" id="login-form-error-component" style="display: none;">
+
+                </div>
+            </div>           
+            <div class="form-group">
+                <label for="email-input">Email</label>
+                <input type="email" class="form-control" id="email-input" placeholder="E-Mail Address" required="">
+            </div>
+            <div class="form-group">
+                <label for="password-input">Password</label>
+                <input type="password" class="form-control" id="password-input" placeholder="Your account password" required="">
+            </div>
+            <div class="form-group">
+                <button type="submit" id="form-submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="form-group">
+                <p class="text-center">Don't have an account? <a href="{% url 'pages:signup' %}">create account</a></p>
+            </div>            
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- External JS -->
+<script src="/media/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+<script src="/media/js/auth/login.js" type="text/javascript"></script>
+<!-- End of external JS-->
+</div>
+{% endblock %}

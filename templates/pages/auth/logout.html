@@ -1,0 +1,11 @@
+<!-- Jquery -->
+<script src="/media/vendor/jquery/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        // clear the local storage car-owner
+        localStorage.removeItem('car-owner');
+        // redirect to the login page
+        $(location).attr('href','/login')
+    })
+</script>

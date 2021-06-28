@@ -1,0 +1,57 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+<title>Orange trace | About us</title>
+{% endblock %}
+
+{% block content%}
+ <!-- Page Content -->
+ <div class="page-heading about-heading header-text" style="background-image: url(/media/images/heading-1.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-content">
+            <h4>about us</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="best-features about-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Tracing an orange made easier!</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="right-image">
+            <img src="/media/images/abt.jpg" width="570" height="350" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="left-content">
+            <h4>What we do</h4>
+            <p>
+                We enable consumers to trace oranges with ease. We link orange consumers
+                with orange farmers who have partenered with us.
+                <br>
+                Our work is to handle the gap between potential consumers
+                and partenered orange farmers.
+            </p>
+            <ul class="social-icons">
+              <li><a href="https://facebook.com"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% include '../components/call-to-action.html' %}
+{% endblock %}

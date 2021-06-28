@@ -1,0 +1,28 @@
+.auth-section {
+  width: 100%;
+  padding-top: 90px;
+  margin-bottom: 10px;
+  min-height: 72vh;
+}
+
+.login-form-container {
+  width: 50%;
+  margin: 0px auto;
+  padding: 10px;
+  box-shadow: 0px 1px 3px #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.login-form-container .form-group #form-submit {
+  width: 100%;
+}
+
+.signup-form-container {
+  width: 50%;
+  margin: 0px auto;
+  padding: 10px;
+  box-shadow: 0px 1px 3px #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.signup-form-container .form-group #form-submit {
+  width: 100%;
+}

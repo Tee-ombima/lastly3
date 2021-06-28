@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- Google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- MDB icons -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <!-- Bootstrap core CSS -->
+    <link href="/media/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/media/css/fontawesome.css">
+    <link rel="stylesheet" href="/media/css/style.css">
+    <link rel="stylesheet" href="/media/css/owl.css">
+    <link rel="stylesheet" href="/media/css/custom.css">
+
+    {% block title %}
+    <title>Orange trace</title>
+    <meta  name="twitter:card" content="summary_large_image" />
+    <meta  name="og:type" content="website" />
+    <meta  name="og:url" content="https://orange-hire.herokuapp.com" />
+    <meta  name="og:title" content="VehicleHire" />
+    <meta  name="og:description" content="Joining the gap between orange owners and orange customers" />
+    {% endblock %}
+</head>
+<body>
+    {% include './header.html' %}
+    {% block content %}
+    {% endblock %}
+    {% include './footer.html' %}
+    <!-- Bootstrap core JavaScript -->
+    <script src="/media/vendor/jquery/jquery.min.js"></script>
+    <script src="/media/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Additional Scripts -->
+    <script src="/media/js/custom.js"></script>
+    <script src="/media/js/owl.js"></script>
+</body>
+</html>

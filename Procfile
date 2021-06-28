@@ -1,0 +1,1 @@
+web: gunicorn vehicleHire.wsgi:application --log-file -

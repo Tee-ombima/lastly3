@@ -1,0 +1,166 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+<title> OrangeTrace | Oranges</title>
+{% endblock %}
+
+{% block content %}
+<!--Start of page content-->
+<div class="page-heading about-heading header-text" style="background-image: url(/media/images/heading-6.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-content">
+            <h4>{{orange.type}},{{orange.model}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="products">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <div>
+        <img src="/media/{{orange.foreground_image}}" alt="{{orange.model}}" class="img-fluid wc-image">
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-sm-4 col-6">
+            <div>
+            <img src="/media/{{orange.inside_image}}" alt="{{orange.model}}" class="img-fluid">
+            </div>
+            <br>
+        </div>
+        <div class="col-sm-4 col-6">
+            <div>
+            <img src="/media/{{orange.background_image}}" alt="{{orange.model}}" class="img-fluid">
+            </div>
+            <br>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <form action="#" method="post" class="form">
+        <ul class="list-group list-group-flush">
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Type</span>
+
+                    <strong class="pull-right">{{orange.type}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left"> Planting Date</span>
+
+                    <strong class="pull-right">{{orange.model}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Maturity date</span>
+
+                    <strong class="pull-right">{{orange.maturity_date}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Grafted</span>
+
+                    <strong class="pull-right">{{orange.grafted}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Supplier</span>
+
+                    <strong class="pull-right">{{orange.supplier}}</strong>
+                </div>
+            </li>
+
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Supplier location</span>
+
+                    <strong class="pull-right">{{orange.supplier_location | title}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Reported cases</span>
+
+                    <strong class="pull-right">{{orange.reported_cases}}</strong>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="clearfix">
+                    <span class="pull-left">Safety status</span>
+
+                  <strong class="pull-right">
+                        {% if orange.hired %} Already hired {% else %} pending... {% endif %}
+                    </strong>
+                </div>
+            </li>
+        </ul>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="section">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <div class="section-heading">
+        <h2>Contact Details</h2>
+        </div>
+
+        <div class="left-content">
+        <p>
+            <span>Name</span>
+
+            <br>
+
+            <strong>{{orange.owner.name}}</strong>
+        </p>
+
+        <p>
+            <span>Phone</span>
+
+            <br>
+
+            <strong>
+            <a href="tel:{{orange.owner.phone}}">{{orange.owner.phone}}</a>
+            </strong>
+        </p>
+
+        <p>
+            <span>Email</span>
+
+            <br>
+
+            <strong>
+            <a href="mailto:{{orange.owner.email}}">{{orange.owner.email}}</a>
+            </strong>
+        </p>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<!--End of page content-->
+{% include '../components/call-to-action.html' %}
+{% endblock %}

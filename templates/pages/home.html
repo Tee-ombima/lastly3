@@ -1,0 +1,47 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+<title>Orange trace</title>
+{% endblock %}
+
+{% block content%}
+{% include '../components/home-banner.html' %}
+<div class="latest-products">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="section-heading">
+        <h2>Featured farmers</h2>
+        <a href="{% url 'pages:oranges' %}">view more <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+    {% for orange in oranges %}
+    <div class="col-lg-4 col-md-6">
+        <div class="product-item">
+        <a href="{% url 'pages:orange' orange.id %}"><img src="/media/{{orange.foreground_image}}" alt="{{orange.model}}"></a>
+        <div class="down-content">
+            <a href="{% url 'pages:orange' orange.id %}"><h4>{{orange.type}}, {{orange.supplier}}</h4></a>
+
+            <h6>{{orange.price}}</h6>
+
+            <small>
+            <strong title="Author"><i class="fa fa-dashboard"></i>{{orange.maturity_date}} </strong> &nbsp;&nbsp;&nbsp;&nbsp;
+            <strong title="EngineSize"><i class="fa fa-cube"></i>{{orange.supplier}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong title="Location"><i class="material-icons"></i>{{orange.location | title}}</strong>
+            </small>
+
+
+        </div>
+        <div class="down-actions">
+            <a href="{% url 'pages:orange' orange.id %}" class="filled-button">
+                trace now
+            </a>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+</div>
+{% include '../components/call-to-action.html' %}
+{% endblock %}

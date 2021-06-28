@@ -1,0 +1,74 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+<title>Orange trace | Contact us</title>
+{% endblock %}
+
+{% block content%}
+<!-- Page Content -->
+<div class="page-heading contact-heading header-text" style="background-image: url(/media/images/heading-4.jpg);">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="text-content">
+        <h2>Contact Us</h2>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<div class="send-message">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="section-heading">
+        <h2>Send us a Message</h2>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="contact-form">
+        <form id="contact-us-form" action="" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="alert alert-success" id="contact-us-form-alert" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                <input name="name" type="text" class="form-control" id="name-input" placeholder="Full Name" required>
+                </fieldset>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                <input name="email" type="text" class="form-control" id="email-input" placeholder="E-Mail Address" required>
+                <small id="email-input-error" class="text-danger"></small>
+                </fieldset>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                <input name="subject" type="text" class="form-control" id="subject-input" placeholder="Subject" required>
+                </fieldset>
+            </div>
+            <div class="col-lg-12">
+                <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message-input" placeholder="Your Message" required></textarea>
+                </fieldset>
+            </div>
+            <div class="col-lg-12">
+                <fieldset>
+                <button type="submit" id="contact-us-form-submit" class="filled-button">Send Message</button>
+                </fieldset>
+            </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Scripts -->
+<script type="text/javascript">window.CSRF_TOKEN="{{csrf_token}}"</script>
+<script type="text/javascript" src="/media/js/contact-us.js"></script>
+</div>
+{% endblock %}

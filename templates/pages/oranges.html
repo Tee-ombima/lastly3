@@ -1,0 +1,97 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+<title>Orange trace | Oranges</title>
+{% endblock %}
+
+{% block content%}
+<!-- Page Content -->
+<div class="page-heading about-heading header-text" style="background-image: url(/media/images/heading-6.jpg);">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="text-content">
+        <h2>Oranges</h2>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="products">
+<div class="container">
+    <div class="row">
+    <div class="col-md-3">
+        <div class="contact-form">
+            <form action="#">
+
+
+
+                <label>Type:</label>
+
+                <select class="form-control" id="type-select-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Planting Date:</label>
+
+                <select class="form-control" id="model-select-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Price:</label>
+
+                <select class="form-control" id="price-select-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Maturity date:</label>
+
+                <select class="form-control" id="maturity_date-select-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Supplier:</label>
+
+                <select class="form-control" id="engine-size-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Supplier Location:</label>
+
+                <select class="form-control" id="grafted-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Safety status:</label>
+
+                <select class="form-control" id="gear-box-input">
+                    <option value="">-- All --</option>
+                </select>
+
+                <label>Reported cases:</label>
+
+                <select class="form-control" id="number-of-seats-input">
+                    <option value="">-- All --</option>
+                </select>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <div class="row" id="orange-data-content">
+        </div>
+    </div>
+    </div>
+</div>
+<!-- External Js -->
+<script src="/media/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    let oranges = '{{ vehicles_json|safe }}';
+</script>
+<script src="/media/js/oranges.js" type="text/javascript"></script>
+
+</div>
+{% include '../components/call-to-action.html' %}
+{% endblock %}

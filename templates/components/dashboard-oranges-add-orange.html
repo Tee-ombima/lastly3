@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+        <div class="add-orange-form-container">
+            <form id="add-orange-form" method="post">
+                {% csrf_token %}
+                <div class="row">
+
+                <div class="col-12 col-sm-12 col-md-12 text-center">
+                    <div class="form-group">
+                        <div class="alert alert-success" id="add-orange-form-msg-component" style="display: none;">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="type-input">Type</label>
+                        <input type="text" class="form-control" id="type-input" placeholder="Orange type" required="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="price-input">Price</label>
+                        <div class="input-group mb-2">
+
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Kshs</div>
+                            </div>
+
+                            <input type="number" class="form-control" id="price-input" placeholder="Price" required>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="col-auto">
+                        <label for="maturity_date-input">Maturity Date</label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" id="maturity_date-input" placeholder="Maturity date" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="model-input">Planting Date</label>
+                        <input type="text" class="form-control" id="model-input" placeholder="planting date" required="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="location-input">Location</label>
+                        <input type="text" class="form-control" id="location-input" placeholder="Where are you located" required>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="col-auto">
+                        <label for="engine-size-input">Supplier</label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" id="engine-size-input" placeholder="your supplier" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="gear-box-input">Safety status</label>
+                        <select class="form-control" id="gear-box-input" required>
+                            <option value="">select safety status</option>
+                            <option value="safe">safe</option>
+                            <option value="Unsafe">Unsafe</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class='form-group'>
+                        <label for="grafted-input">Grafted</label>
+                        <select class="form-control" id="grafted-input" required>
+                            <option value="">Is product grafted?</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="number-of-seats-input">Reported Cases</label>
+                        <input type="number" class="form-control" placeholder="num of safety incidences reported" id="number-of-seats-input" required>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="front-image-input">First image</label>
+                        <input type="file" id="front-image-input" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="inside-image-input">second image</label>
+                        <input type="file" id="inside-image-input" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label for="back-image-input">third image</label>
+                        <input type="file" id="back-image-input" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <button type="submit" id="add-orange-form-submit-btn" class="btn btn-primary">Add product</button>
+                    </div>
+                </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- External JS -->
+    <script src="/media/vendor/jquery/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">window.CSRF_TOKEN="{{csrf_token}}"</script>
+    <script src="/media/js/dashboard/add-a-orange.js" type="text/javascript"></script>
+    <!-- End of external JS -->
+</div>
